@@ -1,0 +1,112 @@
+/* ── Comparison Grid ────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-6);
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* ── Shared Card Base ──────────────────────────────────── */
+.card {
+  border-radius: var(--radius-md);
+  padding: var(--sp-8);
+  position: relative;
+}
+
+/* ── Typical Firm (muted) ──────────────────────────────── */
+.cardMuted {
+  composes: card;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+}
+
+/* ── Our Firm (highlighted) ────────────────────────────── */
+.cardHighlighted {
+  composes: card;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-accent);
+  box-shadow: var(--shadow-gold);
+}
+
+/* ── Recommended Badge ─────────────────────────────────── */
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: var(--sp-1) var(--sp-4);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+/* ── Card Title ────────────────────────────────────────── */
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-6);
+}
+
+.cardTitleMuted {
+  composes: cardTitle;
+  color: var(--color-text-muted);
+}
+
+.cardTitleAccent {
+  composes: cardTitle;
+  color: var(--color-text);
+}
+
+/* ── Feature List ──────────────────────────────────────── */
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.listItem svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.iconError {
+  color: var(--color-error);
+}
+
+.iconSuccess {
+  color: var(--color-success);
+}
+
+/* ── Bottom CTA ────────────────────────────────────────── */
+.cta {
+  text-align: center;
+  margin-top: var(--sp-12);
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+  }
+
+  .cardHighlighted {
+    order: -1;
+  }
+}

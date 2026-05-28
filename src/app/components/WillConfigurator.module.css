@@ -1,0 +1,270 @@
+/* WillConfigurator.module.css — Estate Planning Configurator */
+
+/* ── Container Override ────────────────────────────────── */
+.narrowContainer {
+  max-width: 720px;
+}
+
+/* ── Config Card ───────────────────────────────────────── */
+.configCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-8);
+}
+
+/* ── Step Progress ─────────────────────────────────────── */
+.stepsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: var(--sp-8);
+  position: relative;
+}
+
+.stepWrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Connecting line between steps */
+.stepLine {
+  width: 3rem;
+  height: 2px;
+  background: var(--color-border);
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.stepLineCompleted {
+  background: var(--color-accent);
+}
+
+.stepCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  transition: all var(--duration-base) var(--ease-out);
+  flex-shrink: 0;
+}
+
+.stepCircleActive {
+  background: var(--color-text);
+  color: var(--color-bg);
+  border-color: var(--color-text);
+}
+
+.stepCircleCompleted {
+  background: var(--color-accent);
+  color: #FFFFFF;
+  border-color: var(--color-accent);
+}
+
+@media (max-width: 480px) {
+  .stepLine {
+    width: 1.5rem;
+  }
+}
+
+/* ── Step Content ──────────────────────────────────────── */
+.stepTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: var(--sp-4);
+  margin-bottom: var(--sp-2);
+}
+
+.stepDesc {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: var(--sp-6);
+  line-height: 1.6;
+}
+
+/* ── Radio Group ───────────────────────────────────────── */
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.radioOption {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  padding: var(--sp-5);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.radioOption:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent-light);
+}
+
+.radioOptionSelected {
+  border-color: var(--color-accent);
+  background: var(--color-accent-light);
+}
+
+/* ── Radio Dot ─────────────────────────────────────────── */
+.radioDot {
+  width: 1.25rem;
+  height: 1.25rem;
+  min-width: 1.25rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.15rem;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.radioDotSelected {
+  border-color: var(--color-accent);
+}
+
+.radioDotInner {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: var(--radius-full);
+  background: transparent;
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.radioDotInnerSelected {
+  background: var(--color-accent);
+}
+
+.radioLabel {
+  font-weight: 600;
+}
+
+.radioHint {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: var(--sp-1);
+}
+
+/* ── Step Navigation ───────────────────────────────────── */
+.navRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--sp-10);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--sp-6);
+}
+
+.btnDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Final Step (Step 4) ───────────────────────────────── */
+.finalStep {
+  text-align: center;
+  padding: var(--sp-6) 0;
+}
+
+.finalIcon {
+  color: var(--color-accent);
+  margin: 0 auto var(--sp-6) auto;
+  display: block;
+}
+
+.finalTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-2);
+}
+
+.finalDesc {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: var(--sp-8);
+}
+
+/* Summary Card */
+.summaryCard {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-6);
+  text-align: left;
+  margin-bottom: var(--sp-8);
+}
+
+.summaryHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-4);
+}
+
+.summaryList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.finalActions {
+  display: flex;
+  gap: var(--sp-4);
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .finalActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ── Subsection Label (Step 2 second question) ─────────── */
+.subLabel {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin: var(--sp-6) 0 var(--sp-4) 0;
+  line-height: 1.6;
+}
+
+/* ── Print Header ──────────────────────────────────────── */
+.printHeader {
+  display: none;
+}
+
+@media print {
+  .printHeader {
+    display: block !important;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #C5A55A;
+  }
+
+  .printHeaderTitle {
+    font-size: 16pt;
+    margin-bottom: 0.25rem;
+  }
+
+  .printHeaderSub {
+    font-size: 10pt;
+    color: #666;
+  }
+}

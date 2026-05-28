@@ -1,0 +1,158 @@
+/* ── Hero Section ───────────────────────────────────────── */
+.hero {
+  padding-top: clamp(5rem, 10vw, 8rem);
+  padding-bottom: var(--section-py);
+  text-align: center;
+}
+
+/* ── Fade-in on mount ──────────────────────────────────── */
+.content {
+  max-width: 48rem;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s var(--ease-out),
+              transform 0.8s var(--ease-out);
+}
+
+.contentVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Section Tag ───────────────────────────────────────── */
+.tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  letter-spacing: 0.2em;
+  margin-bottom: var(--sp-6);
+  display: block;
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* ── Heading ───────────────────────────────────────────── */
+.heading {
+  font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--sp-6);
+}
+
+/* ── Subtitle ──────────────────────────────────────────── */
+.subtitle {
+  color: var(--color-text-secondary);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  max-width: 36rem;
+  margin: 0 auto var(--sp-10) auto;
+}
+
+/* ── CTA Row ───────────────────────────────────────────── */
+.ctaRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-8);
+  flex-wrap: wrap;
+}
+
+/* ── Google Badge ──────────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  transition: all var(--duration-fast) var(--ease-out);
+  text-decoration: none;
+}
+
+.badge:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.badgeStar {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.badgeRating {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.badgeDot {
+  width: 3px;
+  height: 3px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-text-muted);
+}
+
+/* ── Trust Bar ─────────────────────────────────────────── */
+.trustBar {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--sp-10);
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-16);
+}
+
+.trustItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.trustNumber {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  line-height: 1;
+}
+
+.trustLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .trustBar {
+    gap: var(--sp-8);
+  }
+
+  .trustNumber {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trustBar {
+    flex-direction: column;
+    gap: var(--sp-6);
+  }
+
+  .ctaRow {
+    flex-direction: column;
+  }
+
+  .ctaRow a {
+    width: 100%;
+  }
+}

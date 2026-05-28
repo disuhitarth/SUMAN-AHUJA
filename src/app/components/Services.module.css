@@ -1,0 +1,89 @@
+/* ── Services Grid ──────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--sp-6);
+}
+
+/* ── Card ──────────────────────────────────────────────── */
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid transparent;
+  border-radius: var(--radius-md);
+  padding: var(--sp-8);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.card:hover {
+  border-top-color: var(--color-accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ── Icon Container ────────────────────────────────────── */
+.iconWrap {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--sp-5);
+  flex-shrink: 0;
+}
+
+.iconWrap svg {
+  color: var(--color-accent);
+}
+
+/* ── Card Title ────────────────────────────────────────── */
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-3);
+}
+
+/* ── Card Description ──────────────────────────────────── */
+.cardDesc {
+  color: var(--color-text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin-bottom: var(--sp-6);
+}
+
+/* ── Features List ─────────────────────────────────────── */
+.features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-6);
+  flex: 1;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: 0.875rem;
+  color: var(--color-text);
+}
+
+.featureItem svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* ── Pricing Tag ───────────────────────────────────────── */
+.pricing {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--color-border-light);
+  letter-spacing: 0.02em;
+}

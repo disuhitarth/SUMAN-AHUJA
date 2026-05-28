@@ -1,0 +1,180 @@
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--sp-12);
+  align-items: center;
+}
+
+.visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.credentialCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-10);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  position: relative;
+  width: 100%;
+  max-width: 26rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out);
+}
+
+.credentialCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.accentLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover));
+}
+
+.scaleIcon {
+  color: var(--color-accent);
+  margin-bottom: var(--sp-6);
+  background-color: var(--color-accent-light);
+  padding: var(--sp-4);
+  border-radius: var(--radius-full);
+  box-sizing: content-box;
+}
+
+.cardName {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-2);
+  color: var(--color-text);
+}
+
+.cardTitle {
+  font-size: 0.9375rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-bottom: var(--sp-1);
+}
+
+.cardSub {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--sp-6);
+}
+
+.languages {
+  display: flex;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-8);
+}
+
+.langBadge {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.lawBadge {
+  border-top: 1px solid var(--color-border-light);
+  padding-top: var(--sp-4);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.badgeSub {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+.badgeText {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.bio {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: var(--sp-4);
+}
+
+.bio strong {
+  color: var(--color-text);
+}
+
+.credentialsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-6);
+  margin-top: var(--sp-6);
+}
+
+.credentialItem {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: flex-start;
+}
+
+.credentialIcon {
+  background-color: var(--color-accent-light);
+  color: var(--color-accent);
+  padding: var(--sp-2);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.credentialTitle {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.15rem;
+}
+
+.credentialDesc {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+  
+  .credentialsList {
+    grid-template-columns: 1fr;
+    gap: var(--sp-4);
+  }
+}

@@ -1,0 +1,201 @@
+.grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: var(--sp-12);
+  align-items: start;
+}
+
+.desc {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: var(--sp-8);
+}
+
+/* Contact info cards */
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+  margin-bottom: var(--sp-8);
+}
+
+.infoCard {
+  display: flex;
+  gap: var(--sp-4);
+  align-items: flex-start;
+}
+
+.iconCircle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+
+.infoTitle {
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: var(--sp-1);
+  color: var(--color-text);
+}
+
+.infoValue {
+  color: var(--color-text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.infoNote {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-top: var(--sp-1);
+}
+
+/* Office hours */
+.hoursTitle {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-4);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.hoursTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hoursTable td {
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.hoursDay {
+  font-weight: 500;
+  color: var(--color-text);
+  width: 40%;
+}
+
+.hoursTime {
+  color: var(--color-text-secondary);
+}
+
+/* Form card */
+.formCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-8);
+}
+
+.formTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-6);
+  color: var(--color-text);
+}
+
+/* Success state */
+.success {
+  text-align: center;
+  padding: var(--sp-12) var(--sp-4);
+}
+
+.successIcon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--sp-4);
+  color: var(--color-accent);
+}
+
+.successTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-3);
+  color: var(--color-text);
+}
+
+.successText {
+  color: var(--color-text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+/* Map container */
+.mapContainer {
+  margin-top: var(--sp-12);
+  height: 350px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.mapContainer iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Info pills */
+.pills {
+  display: flex;
+  justify-content: center;
+  gap: var(--sp-4);
+  margin-top: var(--sp-6);
+  flex-wrap: wrap;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface);
+}
+
+.pill svg {
+  color: var(--color-accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+
+  .formCard {
+    padding: var(--sp-6);
+  }
+
+  .mapContainer {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pills {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,224 @@
+/* Calculator.module.css — Pricing Calculator */
+
+/* ── Tab Selector (Segmented Control) ──────────────────── */
+.tabContainer {
+  display: flex;
+  gap: var(--sp-1);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-1);
+  max-width: 28rem;
+  margin: 0 auto var(--sp-12) auto;
+}
+
+.tabBtn {
+  flex: 1;
+  padding: 0.65rem var(--sp-4);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+  white-space: nowrap;
+}
+
+.tabBtn:hover {
+  color: var(--color-text);
+}
+
+.tabBtnActive {
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Calculator Layout ─────────────────────────────────── */
+.calcLayout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--sp-10);
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .calcLayout {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+}
+
+/* ── Left Column (Inputs) ──────────────────────────────── */
+.inputsTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.inputsTitle svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.formGroupTop {
+  margin-top: var(--sp-6);
+}
+
+.formGroupLarge {
+  margin-top: var(--sp-8);
+}
+
+/* Transaction Type 2×2 Grid */
+.typeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3);
+  margin-top: var(--sp-2);
+}
+
+.typeBtn {
+  padding: var(--sp-2) var(--sp-3);
+  font-size: 0.85rem;
+}
+
+/* Slider + Display */
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-top: var(--sp-2);
+}
+
+.sliderRow .slider {
+  flex: 1;
+}
+
+.valueDisplay {
+  width: 8.5rem;
+  text-align: center;
+  padding: 0.55rem 0.75rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: var(--sp-2);
+}
+
+/* Credential features */
+.features {
+  margin-top: var(--sp-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.feature svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* ── Right Column (Summary Card) ───────────────────────── */
+.summaryCard {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-8);
+}
+
+.summaryTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-5);
+  letter-spacing: -0.01em;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--sp-2) 0;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--sp-3) 0;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--sp-3) 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.ctaBtn {
+  width: 100%;
+  margin-top: var(--sp-5);
+}
+
+.disclaimer {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-top: var(--sp-3);
+}
+
+/* ── Walk-in Hours ─────────────────────────────────────── */
+.hoursBlock {
+  margin-top: var(--sp-8);
+}
+
+.hoursTitle {
+  font-size: 1rem;
+  margin-bottom: var(--sp-3);
+}
+
+.hoursRow {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--sp-2);
+}
+
+.hoursRow svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* ── Notary pricing hint ───────────────────────────────── */
+.pricingHint {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: var(--sp-3);
+  line-height: 1.5;
+}
