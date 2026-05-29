@@ -115,13 +115,7 @@ export default function Contact() {
                     <td className={styles.hoursTime}>9:00 AM – 6:00 PM</td>
                   </tr>
                   <tr>
-                    <td className={styles.hoursDay}>Saturday</td>
-                    <td className={styles.hoursTime}>
-                      10:00 AM – 2:00 PM (Appointments)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className={styles.hoursDay}>Sunday</td>
+                    <td className={styles.hoursDay}>Sat – Sun</td>
                     <td className={styles.hoursTime}>Closed</td>
                   </tr>
                 </tbody>

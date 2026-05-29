@@ -14,7 +14,7 @@ const faqData: FAQItem[] = [
   {
     question: "Do I need an appointment for Notary services?",
     answer:
-      "No. Walk into our office at Suite GR-09, 25 Watline Avenue during regular hours (Mon-Fri 9-6 PM). No appointment required for standard notarizations, certified copies, and commissioner services. For Saturday or after-hours, please call to schedule.",
+      "No. Walk into our office at Suite GR-09, 25 Watline Avenue during regular hours (Mon-Fri 9-6 PM). No appointment required for standard notarizations, certified copies, and commissioner services. For after-hours service, please contact our office in advance to schedule.",
   },
   {
     question: "What are disbursements in a real estate transaction?",

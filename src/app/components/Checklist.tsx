@@ -110,7 +110,7 @@ export default function Checklist() {
                   <HelpCircle size={18} /> Do I Need an Appointment?
                 </h4>
                 <p className={styles.infoCardBody}>
-                  No! For simple notarizations, commissioner signatures, and true copies, we welcome <strong>walk-ins</strong> from Monday to Friday, 9:00 AM to 6:00 PM. No prior appointment is required. For after-hours or Saturday services, please call us to schedule.
+                  No! For simple notarizations, commissioner signatures, and true copies, we welcome <strong>walk-ins</strong> from Monday to Friday, 9:00 AM to 6:00 PM. No prior appointment is required. For after-hours service, please contact us in advance to schedule.
                 </p>
               </div>
             </div>

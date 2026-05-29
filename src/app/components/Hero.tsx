@@ -152,15 +152,15 @@ export default function Hero() {
         {/* ── Trust Bar ──────────────────────────────── */}
         <div ref={trustBarRef} className={styles.trustBar}>
           <div className={styles.trustItem}>
-            <span className={styles.trustNumber} aria-label="22+ years">
-              <CountUp target={22} start={counterStarted} suffix="+" />
+            <span className={styles.trustNumber} aria-label="23+ years">
+              <CountUp target={23} start={counterStarted} suffix="+" />
             </span>
             <span className={styles.trustLabel}>Years Ontario Practice</span>
           </div>
 
           <div className={styles.trustItem}>
-            <span className={styles.trustNumber} aria-label="2,500+ closings">
-              <CountUp target={2500} start={counterStarted} suffix="+" />
+            <span className={styles.trustNumber} aria-label="8,000+ closings">
+              <CountUp target={8000} start={counterStarted} suffix="+" />
             </span>
             <span className={styles.trustLabel}>Closings Handled</span>
           </div>

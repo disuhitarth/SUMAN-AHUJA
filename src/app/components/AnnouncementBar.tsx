@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { X, Globe } from "lucide-react";
 import styles from "./AnnouncementBar.module.css";
 
-type OfficeStatus = "open" | "appointment" | "closed";
+type OfficeStatus = "open" | "closed";
 
 interface StatusInfo {
   status: OfficeStatus;
@@ -36,18 +36,7 @@ function getOfficeStatus(): StatusInfo {
     return { status: "closed", label: "Closed", nextOpen: "tomorrow at 9:00 AM" };
   }
 
-  // Saturday: 10:00–14:00 by appointment
-  if (day === 6) {
-    if (time >= 10 && time < 14) {
-      return { status: "appointment", label: "Open Sat by Appointment" };
-    }
-    if (time < 10) {
-      return { status: "appointment", label: "Sat by Appointment", nextOpen: "10:00 AM" };
-    }
-    return { status: "closed", label: "Closed", nextOpen: "Monday 9:00 AM" };
-  }
-
-  // Sunday
+  // Saturday & Sunday: Closed
   return { status: "closed", label: "Closed", nextOpen: "Monday 9:00 AM" };
 }
 
@@ -66,11 +55,7 @@ export default function AnnouncementBar() {
   if (dismissed || !statusInfo) return null;
 
   const dotClass =
-    statusInfo.status === "open"
-      ? styles.dotOpen
-      : statusInfo.status === "appointment"
-        ? styles.dotAppointment
-        : styles.dotClosed;
+    statusInfo.status === "open" ? styles.dotOpen : styles.dotClosed;
 
   return (
     <div className={styles.bar} id="announcement-bar">

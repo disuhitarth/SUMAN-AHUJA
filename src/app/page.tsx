@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import HowItWorks from "./components/HowItWorks";
 import PricingComparison from "./components/PricingComparison";
-import Calculator from "./components/Calculator";
 import Checklist from "./components/Checklist";
 import WillConfigurator from "./components/WillConfigurator";
 import About from "./components/About";
@@ -39,8 +38,7 @@ export default function Home() {
         {/* Three-step customer acquisition process timeline */}
         <HowItWorks />
 
-        {/* Real estate closing and notary price calculator */}
-        <Calculator />
+
 
         {/* Interactive notary preparation checklist */}
         <Checklist />

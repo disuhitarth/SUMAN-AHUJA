@@ -1,6 +1,6 @@
 "use client";
 
-import { Key, FileSignature, FileText, Check } from "lucide-react";
+import { Key, FileSignature, FileText, Check, Briefcase, Building2 } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import styles from "./Services.module.css";
 
@@ -18,6 +18,30 @@ const SERVICES = [
     pricing: "From $995 + disbursements",
   },
   {
+    id: "service-commercial",
+    icon: Briefcase,
+    title: "Business & Commercial Closings",
+    desc: "Professional representation for commercial purchases, sales, lease agreements, and business assets transfer.",
+    features: [
+      "Commercial purchase & sale",
+      "Lease agreement reviews",
+      "Business assets transfer",
+    ],
+    pricing: "Quote upon request",
+  },
+  {
+    id: "service-corporate",
+    icon: Building2,
+    title: "Corporate Law",
+    desc: "Incorporation services, annual returns, minute book maintenance, amalgamations, corporate searches, and structural filings.",
+    features: [
+      "Federal & provincial inc.",
+      "Minute book updates",
+      "Corporate structural filings",
+    ],
+    pricing: "Custom packages",
+  },
+  {
     id: "service-notary",
     icon: FileSignature,
     title: "Notary & Commissioner",
@@ -27,15 +51,15 @@ const SERVICES = [
       "Certified true copies",
       "Volume discounts",
     ],
-    pricing: "From $25 / first document",
+    pricing: "From $30",
   },
   {
     id: "service-wills",
     icon: FileText,
     title: "Wills & Estate Planning",
-    desc: "Protect your family and assets with professionally drafted estate documents tailored to your unique circumstances.",
+    desc: "Protect your family and asset with professional drafted estate documents including secondary wills.",
     features: [
-      "Personalized wills",
+      "Primary & Secondary wills",
       "Powers of Attorney",
       "Secure vault storage",
     ],

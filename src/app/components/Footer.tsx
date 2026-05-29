@@ -28,17 +28,22 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#services" className={styles.link}>
+                  Business Closings
+                </a>
+              </li>
+              <li>
+                <a href="#services" className={styles.link}>
+                  Corporate Law
+                </a>
+              </li>
+              <li>
+                <a href="#services" className={styles.link}>
                   Notary &amp; Oaths
                 </a>
               </li>
               <li>
                 <a href="#wills-configurator" className={styles.link}>
                   Wills &amp; POA
-                </a>
-              </li>
-              <li>
-                <a href="#services" className={styles.link}>
-                  Independent Legal Advice
                 </a>
               </li>
             </ul>
@@ -48,11 +53,6 @@ export default function Footer() {
           <div>
             <h4 className={styles.colTitle}>Resources</h4>
             <ul className={styles.links}>
-              <li>
-                <a href="#calculators" className={styles.link}>
-                  Pricing Calculator
-                </a>
-              </li>
               <li>
                 <a href="#notary-checklist" className={styles.link}>
                   Notary Checklist
