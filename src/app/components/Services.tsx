@@ -1,6 +1,7 @@
 "use client";
 
-import { Key, FileSignature, FileText, Check, Briefcase, Building2 } from "lucide-react";
+import { useRef } from "react";
+import { Key, FileSignature, FileText, Check, Briefcase, Building2, ChevronLeft, ChevronRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import styles from "./Services.module.css";
 
@@ -68,6 +69,18 @@ const SERVICES = [
 ];
 
 export default function Services() {
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    const el = gridRef.current;
+    if (!el) return;
+    const scrollAmount = 364; // Card width (340px) + gap (24px)
+    el.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section id="services" className="section-alt">
       <div className="container">
@@ -83,34 +96,57 @@ export default function Services() {
 
         {/* Card Grid Carousel - Wrapped as a single reveal unit */}
         <ScrollReveal>
-          <div className={styles.grid}>
-            {SERVICES.map((service) => (
-              <div
-                key={service.id}
-                id={service.id}
-                className={styles.cardWrapper}
-              >
-                <div className={styles.card}>
-                  <div className={styles.iconWrap}>
-                    <service.icon size={18} />
+          <div className={styles.carouselContainer}>
+            {/* Left navigation chevron */}
+            <button
+              onClick={() => scroll("left")}
+              className={`${styles.scrollBtn} ${styles.scrollBtnLeft}`}
+              aria-label="Scroll left"
+              id="carousel-prev"
+            >
+              <ChevronLeft size={20} />
+            </button>
+
+            {/* Horizontal swipable grid */}
+            <div ref={gridRef} className={styles.grid}>
+              {SERVICES.map((service) => (
+                <div
+                  key={service.id}
+                  id={service.id}
+                  className={styles.cardWrapper}
+                >
+                  <div className={styles.card}>
+                    <div className={styles.iconWrap}>
+                      <service.icon size={18} />
+                    </div>
+
+                    <h3 className={styles.cardTitle}>{service.title}</h3>
+                    <p className={styles.cardDesc}>{service.desc}</p>
+
+                    <ul className={styles.features}>
+                      {service.features.map((feat) => (
+                        <li key={feat} className={styles.featureItem}>
+                          <Check size={14} />
+                          <span>{feat}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className={styles.pricing}>{service.pricing}</div>
                   </div>
-
-                  <h3 className={styles.cardTitle}>{service.title}</h3>
-                  <p className={styles.cardDesc}>{service.desc}</p>
-
-                  <ul className={styles.features}>
-                    {service.features.map((feat) => (
-                      <li key={feat} className={styles.featureItem}>
-                        <Check size={14} />
-                        <span>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className={styles.pricing}>{service.pricing}</div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Right navigation chevron */}
+            <button
+              onClick={() => scroll("right")}
+              className={`${styles.scrollBtn} ${styles.scrollBtnRight}`}
+              aria-label="Scroll right"
+              id="carousel-next"
+            >
+              <ChevronRight size={20} />
+            </button>
           </div>
         </ScrollReveal>
       </div>
