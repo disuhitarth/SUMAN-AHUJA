@@ -84,7 +84,11 @@ export default function Services() {
         {/* Card Grid */}
         <div className={styles.grid}>
           {SERVICES.map((service, i) => (
-            <ScrollReveal key={service.id} delay={i * 100}>
+            <ScrollReveal
+              key={service.id}
+              delay={i * 100}
+              className={styles.cardWrapper}
+            >
               <div id={service.id} className={styles.card}>
                 <div className={styles.iconWrap}>
                   <service.icon size={18} />

@@ -29,6 +29,13 @@
   background: var(--color-accent-hover);
 }
 
+/* ── Card Wrapper ──────────────────────────────────────── */
+.cardWrapper {
+  flex: 0 0 340px; /* Spacious fixed width for the carousel */
+  scroll-snap-align: start;
+  display: flex; /* Allows the card inside to stretch vertically */
+}
+
 /* ── Card ──────────────────────────────────────────────── */
 .card {
   background-color: var(--color-surface);
@@ -39,8 +46,7 @@
   display: flex;
   flex-direction: column;
   transition: all var(--duration-base) var(--ease-out);
-  flex: 0 0 340px; /* Spacious fixed width */
-  scroll-snap-align: start;
+  width: 100%;
 }
 
 .card:hover {
