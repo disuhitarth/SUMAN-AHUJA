@@ -81,36 +81,38 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Card Grid */}
-        <div className={styles.grid}>
-          {SERVICES.map((service, i) => (
-            <ScrollReveal
-              key={service.id}
-              delay={i * 100}
-              className={styles.cardWrapper}
-            >
-              <div id={service.id} className={styles.card}>
-                <div className={styles.iconWrap}>
-                  <service.icon size={18} />
+        {/* Card Grid Carousel - Wrapped as a single reveal unit */}
+        <ScrollReveal>
+          <div className={styles.grid}>
+            {SERVICES.map((service) => (
+              <div
+                key={service.id}
+                id={service.id}
+                className={styles.cardWrapper}
+              >
+                <div className={styles.card}>
+                  <div className={styles.iconWrap}>
+                    <service.icon size={18} />
+                  </div>
+
+                  <h3 className={styles.cardTitle}>{service.title}</h3>
+                  <p className={styles.cardDesc}>{service.desc}</p>
+
+                  <ul className={styles.features}>
+                    {service.features.map((feat) => (
+                      <li key={feat} className={styles.featureItem}>
+                        <Check size={14} />
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className={styles.pricing}>{service.pricing}</div>
                 </div>
-
-                <h3 className={styles.cardTitle}>{service.title}</h3>
-                <p className={styles.cardDesc}>{service.desc}</p>
-
-                <ul className={styles.features}>
-                  {service.features.map((feat) => (
-                    <li key={feat} className={styles.featureItem}>
-                      <Check size={14} />
-                      <span>{feat}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className={styles.pricing}>{service.pricing}</div>
               </div>
-            </ScrollReveal>
-          ))}
-        </div>
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
