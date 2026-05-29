@@ -8,6 +8,21 @@
   scrollbar-width: thin;
   scrollbar-color: var(--color-accent) var(--color-bg-alt);
   -webkit-overflow-scrolling: touch;
+  
+  /* Micro-interaction: Horizontal bounce on entrance to signal scrollability */
+  animation: carouselBounce 1.4s var(--ease-out) 800ms;
+}
+
+@keyframes carouselBounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  35% {
+    transform: translateX(-30px); /* Peek cards horizontally */
+  }
+  70% {
+    transform: translateX(5px);
+  }
 }
 
 /* Custom Scrollbar Styles for Webkit Browsers */
