@@ -1,9 +1,32 @@
-/* ── Services Grid ──────────────────────────────────────── */
+/* ── Services Grid Carousel ─────────────────────────────── */
 .grid {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
   gap: var(--sp-6);
+  padding-bottom: var(--sp-6); /* Space for the custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent) var(--color-bg-alt);
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom Scrollbar Styles for Webkit Browsers */
+.grid::-webkit-scrollbar {
+  height: 5px;
+}
+
+.grid::-webkit-scrollbar-track {
+  background: var(--color-border-light);
+  border-radius: var(--radius-full);
+}
+
+.grid::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: var(--radius-full);
+}
+
+.grid::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-hover);
 }
 
 /* ── Card ──────────────────────────────────────────────── */
@@ -16,16 +39,8 @@
   display: flex;
   flex-direction: column;
   transition: all var(--duration-base) var(--ease-out);
-  flex: 1 1 320px;
-  max-width: 350px;
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .card {
-    max-width: 100%;
-    flex: 1 1 100%;
-  }
+  flex: 0 0 340px; /* Spacious fixed width */
+  scroll-snap-align: start;
 }
 
 .card:hover {
